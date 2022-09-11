@@ -1,0 +1,104 @@
+
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Changa', sans-serif;
+     
+    }
+    
+    body{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #283557;
+    }
+
+
+    
+    .container {
+        position: relative;
+        padding: 70px 40px;
+        background-color: #dfddc6;
+        border-radius: 8%;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+
+    }
+
+    .container h1 {
+        color:black;
+        margin-bottom: 45px;
+        line-height: 1em;
+        padding-left: 10px;
+        border-left: 5px solid #3e60c1;
+
+    }
+
+    .container .inputBox{
+        position: relative;
+        width: 250px;
+        margin:15px;
+    }
+
+    .inputBox input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid black;
+        background: #dfddc6;
+        border-radius: 5px;
+        outline: none;
+        font-size: 1em;
+        transition: 0.5s;
+
+    }
+
+    .inputBox span {
+
+        position: absolute;
+        left: 0;
+        padding: 5px;
+        pointer-events: none;
+        font-size: 1em;
+        text-transform: uppercase;
+        transition: 0.5s;
+    }
+
+    .inputBox input:valid ~ span, 
+    .inputBox input:focus ~ span
+    {
+        color: #4f8fbf;
+        transform : translateX(10px) translateY(-7px);
+        font-size: 0.75em;
+        padding: 0 10px;
+        background: #dfddc6;
+        border-left: 1px solid #4f8fbf; 
+        border-right: 1px solid #4f8fbf;
+        letter-spacing: 0.2em;
+    }
+
+    .inputBox input:valid, 
+    .inputBox input:focus 
+    {
+
+        border: 2px solid #4f8fbf;
+    }
+
+    .container .inputBox input[type="submit"]{
+ 
+        background: #4f8fbf;
+        color:#fff;
+        max-width: 120px;
+        cursor: pointer;
+
+    }
+
+    .container .inputBox input[type="submit"]:active {
+
+        background-color: #283557;
+        box-shadow: 0 5px rgb(148, 147, 147);
+        transform: translateY(5px);
+    }
